@@ -22,6 +22,7 @@ public class AgentService {
         return clientRepository.findAll();
     }
 
-//    public List<Demande> getDemandesByClient(Long id);
-
+    public List<Demande> getDemandesByClient(Long id){
+        return demandeRepository.getAllByClientId(id);
+    }
 }

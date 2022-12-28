@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.*;
 @RestController
 @RequestMapping("/client")
-public class FirstController {
+public class ClientController {
 
     @Autowired
     AgentService agentService;
@@ -26,10 +26,10 @@ public class FirstController {
         return agentService.getClientById(id);
     }
 
-
-//    public List<Demande> getDemandesByClient(Long id){
-//
-//    }
+    @GetMapping("/demandes/{id}")
+    public List<Demande> getDemandesByClient(@PathVariable Long id){
+        return agentService.getDemandesByClient(id);
+    }
 
 
 }

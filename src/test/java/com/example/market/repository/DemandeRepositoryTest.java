@@ -14,7 +14,7 @@ class DemandeRepositoryTest {
 
     @Test
     public void printFindAllByClientId(){
-        List<Demande> ds = repository.getAllByClientId(2L);
+        List<Demande> ds = repository.getAllByClientId(1L);
         System.out.println(ds);
     }
 
